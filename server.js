@@ -102,6 +102,13 @@ app.get('/', (req, res) => {
                     imageUrl: 'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
                 }
             ]
+        },
+        thirdSection: {
+            comment: {
+                label: 'Комментарий',
+                desc: 'Комментарий очень  от.'
+            },
+            state: 'success'
         }
     }
     const styles = fs.readFileSync('styles.css', 'utf-8');

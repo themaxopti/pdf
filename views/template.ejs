@@ -95,6 +95,26 @@
           <% }) %></div>
       </div>
     </div>
-
+    <div style="margin-top: 40px;" class="container block third-block">
+      <div style="margin-bottom: 40px" class="h2-block h2">
+        <div> 03 - Холодный запуск </div>
+        <% if (data.thirdSection.state === 'success') { %>
+          <div style="margin-left: 24px;" class="badge success">В норме</div>
+        <% } %>
+        <% if (data.thirdSection.state === 'error') { %>
+          <div style="margin-left: 24px;" class="badge error">Не в норме</div>
+        <% } %>
+        <div style="margin-left: auto;" class="video-button">
+           Перейти к просмотру видео
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2H24M24 2V24M24 2L2 24" stroke="#FEFEFE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="card-comment" style="background-color: #FEFEFE;">
+        <div class="card-comment__title"><%= data.thirdSection.comment.label %></div>
+        <div class="card-comment__desc"><%= data.thirdSection.comment.desc %></div>
+      </div>
+    </div>
   </body>
 </html>

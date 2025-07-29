@@ -105,7 +105,6 @@ const path = require('path');
         }
     }
 
-
     const data = {
         name: 'Иван Иванов',
         styles,
