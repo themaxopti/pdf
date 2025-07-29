@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      <%= styles %>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-section">
+        <div class="col-1">
+          <div style="font-size: 40px" class="date">
+            Дата осмотра: 04.12.2023
+          </div>
+          <div style="font-size: 103px" class="title">
+            Volkswagen GolfSportsvan VII
+          </div>
+          <div style="font-size: 64px" class="price">69 500 PLN</div>
+        </div>
+        <div class="col-2">
+          <div class="imageContainer">
+            <img
+              src="https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container block first-block">
+      <div style="margin-bottom: 64px" class="h2-block h2">
+        01 - Технические характеристики
+      </div>
+      <div class="first-block__cards">
+        <div class="col-1">
+          <div class="data-card">
+            <div class="data-card__header">Идентификационные данные</div>
+            <div style="margin-top: 40px" class="items">
+              <div class="item">
+                <div class="label">VIN-номер</div>
+                <div class="value">Volkswagen</div>
+              </div>
+              <div class="item">
+                <div class="label">VIN-номер</div>
+                <div class="value">Volkswagen</div>
+              </div>
+            </div>
+          </div>
+          <%- include('partials/data-card') %>
+          <%- include('partials/data-card') %>
+          <%- include('partials/data-card') %>
+          <%- include('partials/data-card') %>
+          <div class="data-card">
+            <div class="data-card__header">Идентификационные данные</div>
+            <div style="margin-top: 40px" class="items">
+              <div class="item">
+                <div class="label">VIN-номер</div>
+                <div class="value">Volkswagen</div>
+              </div>
+              <div class="item">
+                <div class="label">VIN-номер</div>
+                <div class="value">Volkswagen</div>
+              </div>
+            </div>
+          </div>
+          <div class="data-card">
+            <div class="data-card__header">Идентификационные данные</div>
+            <div style="margin-top: 40px" class="items">
+              <div class="color-block">
+                <div class="color-radio"></div>
+                <div class="color-name">Белый</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
