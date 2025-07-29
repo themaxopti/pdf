@@ -1,0 +1,11 @@
+<div class="data-card">
+  <div class="data-card__header"><%= heading %></div>
+  <div style="margin-top: 40px" class="items">
+    <% items.forEach(item => { %>
+    <div class="color-block">
+      <div class="color-radio" style="background-color: <%= item.color %>;"></div>
+      <div class="color-name"><%= item.label %></div>
+    </div>
+    <% }) %>
+  </div>
+</div>

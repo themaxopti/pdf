@@ -42,48 +42,59 @@
       </div>
       <div class="first-block__cards">
         <div class="col-1">
-          <div class="data-card">
-            <div class="data-card__header">Идентификационные данные</div>
-            <div style="margin-top: 40px" class="items">
-              <div class="item">
-                <div class="label">VIN-номер</div>
-                <div class="value">Volkswagen</div>
-              </div>
-              <div class="item">
-                <div class="label">VIN-номер</div>
-                <div class="value">Volkswagen</div>
-              </div>
-            </div>
-          </div>
-          <%- include('partials/data-card') %>
-          <%- include('partials/data-card') %>
-          <%- include('partials/data-card') %>
-          <%- include('partials/data-card') %>
-          <div class="data-card">
-            <div class="data-card__header">Идентификационные данные</div>
-            <div style="margin-top: 40px" class="items">
-              <div class="item">
-                <div class="label">VIN-номер</div>
-                <div class="value">Volkswagen</div>
-              </div>
-              <div class="item">
-                <div class="label">VIN-номер</div>
-                <div class="value">Volkswagen</div>
-              </div>
-            </div>
-          </div>
-          <div class="data-card">
-            <div class="data-card__header">Идентификационные данные</div>
-            <div style="margin-top: 40px" class="items">
-              <div class="color-block">
-                <div class="color-radio"></div>
-                <div class="color-name">Белый</div>
-              </div>
-            </div>
-          </div>
+          <% data.firstSection.items.forEach((block,i) => { %>
+            <% if (block.slug === 'data-card' && i % 2 === 0) { %>
+              <%- include('partials/data-card', { items: block.items, heading: block.heading }) %>
+            <% } %>
+            <% if (block.slug === 'data-color-card' && i % 2 === 0) { %>
+              <%- include('partials/data-card-color', { items: block.items, heading: block.heading }) %>
+            <% } %>
+            <% if (block.slug === 'data-card-comment-border' && i % 2 === 0) { %>
+              <%- include('partials/data-card-comment-border', { comment: block.comment, heading: block.heading }) %>
+            <% } %>
+            <% if (block.slug === 'data-card-additional-checkboxes' && i % 2 === 0) { %>
+              <%- include('partials/data-card-additional-checkboxes', { items: block.items, labels: block.labels, heading: block.heading }) %>
+            <% } %>
+          <% }) %>
         </div>
-        <div class="col-2"></div>
+        <div class="col-2">
+          <% data.firstSection.items.forEach((block,i) => { %>
+            <% if (block.slug === 'data-card' && i % 2 !== 0) { %>
+              <%- include('partials/data-card', { items: block.items, heading: block.heading }) %>
+            <% } %>
+            <% if (block.slug === 'data-color-card' && i % 2 !== 0) { %>
+              <%- include('partials/data-card-color', { items: block.items, heading: block.heading }) %>
+            <% } %>
+            <% if (block.slug === 'data-card-comment-border' && i % 2 !== 0) { %>
+              <%- include('partials/data-card-comment-border', { comment: block.comment, heading: block.heading }) %>
+            <% } %>
+            <% if (block.slug === 'data-card-additional-checkboxes' && i % 2 !== 0) { %>
+              <%- include('partials/data-card-additional-checkboxes', { items: block.items, labels: block.labels, heading: block.heading }) %>
+            <% } %>
+          <% }) %>
+          </div>
       </div>
     </div>
+    <div class="container block second-block">
+      <div style="margin-bottom: 64px" class="h2-block h2">
+        02 - Проверка уровня жидкости
+      </div>
+      <div class="second-block__cards">
+        <div class="col-1">
+          <% data.secondSection.items.forEach((block,i) => { %>
+            <% if (block.slug === 'data-check-card' && i % 2 === 0) { %>
+              <%- include('partials/data-check-card', { title: block.title, state: block.state, comment: block.comment, additionalData: block.additionalData, imageUrl: block.imageUrl }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.secondSection.items.forEach((block,i) => { %>
+            <% if (block.slug === 'data-check-card' && i % 2 !== 0) { %>
+              <%- include('partials/data-check-card', { title: block.title, state: block.state, comment: block.comment, additionalData: block.additionalData, imageUrl: block.imageUrl }) %>
+            <% } %>
+          <% }) %></div>
+      </div>
+    </div>
+
   </body>
 </html>

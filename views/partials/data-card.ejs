@@ -1,9 +1,11 @@
 <div class="data-card">
-  <div class="data-card__header">Идентификационные данные</div>
+  <div class="data-card__header"><%= heading %></div>
   <div style="margin-top: 40px" class="items">
-    <div class="color-block">
-      <div class="color-radio"></div>
-      <div class="color-name">Белый</div>
-    </div>
+    <% items.forEach(item => { %>
+      <div class="item">
+        <div class="label"><%= item.label %></div>
+        <div class="value"><%= item.value %></div>
+      </div>
+    <% }) %>
   </div>
 </div>

@@ -1,0 +1,48 @@
+<div class="check-card">
+  <div class="check-card__header">
+    <div class="check-card__header-title"><%= title %></div>
+    <% if (state === 'error') { %>
+    <div class="check-card__header-state error">Не в норме</div>
+    <% } %>
+    <% if (state === 'success') { %>
+        <div class="check-card__header-state success">В норме</div>
+    <% } %>
+  </div>
+  <div class="check-card__img">
+    <img
+      src="<%= imageUrl %>"
+      alt=""
+    />
+  </div>
+  <div class="card-comment" style="margin-top: 24px">
+    <% if (comment) { %>
+        <div class="card-comment__title"><%= comment.title %></div>
+        <div class="card-comment__desc">
+          <%= comment.desc %>
+        </div>
+    <% } %>
+    <% if (!comment) { %>
+        <div class="card-comment__title"> Комментарий отсутствует</div>
+    <% } %>
+  </div>
+  <div style="margin-top: 24px">
+    <% if (additionalData) { %>
+        <div class="additional-checkbox-block">
+            <div class="heading">Дополнительные данные</div>
+            <div class="labels">
+            <% additionalData.labels.forEach(item => { %> 
+                <div class="label">
+                    <div class="checkbox">
+                    <% if (item.checked) { %> 
+                    <div class="checked"></div>
+                    <% } %> 
+                    </div>
+                    <div class="label-text"><%= item.label %></div>
+                </div>
+            <% }) %>
+            </div>
+        </div>
+    <% } %>
+  </div>
+  
+</div>
