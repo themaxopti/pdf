@@ -1,0 +1,19 @@
+<div class="car-images-comments-block">
+    <div class="car-heading">
+      <div class="title"><%= title %></div>
+      <% if (state === 'error') { %>
+        <div class="badge error">Не в норме</div>
+      <% } %>
+      <% if (state === 'success') { %>
+        <div class="badge success">В норме</div>
+      <% } %>
+    </div>
+    <div class="images-grid">
+      <% images.forEach(image => { %>
+        <div><img src="<%= image %>" alt=""></div>
+      <% }) %>
+    </div>
+    <div style="margin-top: 40px;">
+      <%- include('card-comment', { title: comment?.title || null, desc: comment?.desc || null }) %>
+    </div>
+</div>

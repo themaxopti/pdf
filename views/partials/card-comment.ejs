@@ -1,4 +1,9 @@
 <div class="card-comment">
-  <div class="card-comment__title"><%= title %></div>
-  <div class="card-comment__desc"><%= desc %></div>
+    <% if (title && desc) { %>
+        <div class="card-comment__title"><%= title %></div>
+        <div class="card-comment__desc"><%= desc %></div>
+    <% } %>
+    <% if (!title && !desc) { %>
+        <div class="card-comment__title">Комментарий отсутствует</div>
+    <% } %>
 </div>

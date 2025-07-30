@@ -1,11 +1,65 @@
 <div class="data-card">
   <div class="data-card__header"><%= heading %></div>
   <div style="margin-top: 40px" class="items">
-    <% items.forEach(item => { %>
+    <% typeof items !== 'undefined' && items && items.forEach(item => { %>
       <div class="item">
         <div class="label"><%= item.label %></div>
-        <div class="value"><%= item.value %></div>
+        <% if (item.value) { %>
+          <div class="value"><%= item.value %></div>
+        <% } %>
+        <% if (item.colorNumber) { %>
+          <% if (item.colorNumber < 4) { %>
+            <div class="color-number error"><%= item.colorNumber %> / 10</div>
+          <% } %>
+          <% if (item.colorNumber > 3 && item.colorNumber < 7) { %>
+            <div class="color-number yellow"><%= item.colorNumber %> / 10</div>
+          <% } %>
+          <% if (item.colorNumber > 6) { %>
+            <div class="color-number"><%= item.colorNumber %> / 10</div>
+          <% } %>
+        <% } %>
       </div>
     <% }) %>
   </div>
+  <% if (typeof images !== 'undefined' && images && images.length > 0) { %>
+    <div class="images-grid">
+      <% images.forEach(image => { %>
+        <div class="image">
+          <img src="<%= image %>" alt="">
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+  <% if (typeof comment !== 'undefined') { %>
+    <div class="card-comment" style="margin-top: 24px">
+      <% if (comment) { %>
+          <div class="card-comment__title"><%= comment.title %></div>
+          <div class="card-comment__desc">
+            <%= comment.desc %>
+          </div>
+      <% } %>
+      <% if (!comment) { %>
+          <div class="card-comment__title"> Комментарий отсутствует</div>
+      <% } %>
+    </div>
+  <% } %>
+  <% if (typeof imagesComments !== 'undefined') { %>
+    <div class="images-comments">
+      <% imagesComments.forEach(imageComment => { %>
+        <div class="images-comments__block">
+          <div class="images-comments__label"><%= imageComment.label %></div>
+          <% if (typeof imageComment.images !== 'undefined') { %>
+            <div style="margin-top: 0px" class="images-grid">
+              <% typeof imageComment.images !== 'undefined' && imageComment.images && imageComment.images.forEach(image => { %>
+                  <div class="image">
+                    <img src="<%= image %>">
+                  </div>
+                  <% }) %>
+              </div>
+          <% } %>
+          <%- include('card-comment', { title: imageComment.comment.title || null, desc: imageComment.comment.desc || null }) %>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
 </div>

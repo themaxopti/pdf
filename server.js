@@ -109,6 +109,403 @@ app.get('/', (req, res) => {
                 desc: 'Комментарий очень  от.'
             },
             state: 'success'
+        },
+        fourthSection: {
+            items: [
+                {
+                    title: 'Комментарий',
+                    state: 'error',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: {
+                        title: 'Комментарий',
+                        desc: 'Комментарий очень  от.'
+                    }
+                },
+                {
+                    title: 'Комментарий',
+                    state: 'success',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null
+                }
+            ]
+        },
+        fifthSection: {
+            items: [
+                {
+                    heading: 'Левое переднее колесо',
+                    items: [
+                        {
+                            label: 'Комментарий',
+                            colorNumber: 5
+                        },
+                        {
+                            label: 'Комментарий',
+                            colorNumber: 1
+                        }
+                    ],
+                    comment: {
+                        title: 'Комментарий',
+                        desc: 'Комментарий очень  от.'
+                    },
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                },
+                {
+                    heading: 'Левое переднее колесо',
+                    items: [
+                        {
+                            label: 'Комментарий',
+                            colorNumber: 5
+                        },
+                        {
+                            label: 'Комментарий',
+                            colorNumber: 1
+                        }
+                    ],
+                    comment: null,
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                }
+            ]
+        },
+        sixthSection: {
+            items: [
+                {
+                    number: 1,
+                    label: 'Капот',
+                    badgeLabel: '2 повреждения',
+                    badgeState: 'success'
+                },
+                {
+                    number: 2,
+                    label: 'Капот',
+                    badgeLabel: '2 повреждения',
+                    badgeState: 'error'
+                }
+            ],
+            carImage: 'https://i.postimg.cc/Y0FrHcTT/img-7.png',
+            imagesComments: [
+                {
+                    heading: 'Левое переднее колесо',
+                    imagesComments: [
+                        {
+                            label: 'Комментарий',
+                            comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                            images: [
+                                'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            ],
+                        },
+                        {
+                            label: 'Скол',
+                            comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                            // images: [
+                            //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            // ],
+                        }
+                    ]
+                },
+                {
+                    heading: 'Левое переднее колесо',
+                    imagesComments: [
+                        {
+                            label: 'Комментарий',
+                            comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                            images: [
+                                'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            ],
+                        },
+                        {
+                            label: 'Скол',
+                            comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                            // images: [
+                            //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                            // ],
+                        }
+                    ]
+                }
+            ],
+            rightSide: {
+                carImage: 'https://i.postimg.cc/MGvsN5jj/img-8.png',
+                items: [
+                    {
+                        number: 1,
+                        label: 'Капот 2',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'success'
+                    },
+                    {
+                        number: 2,
+                        label: 'Капот 2',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'error'
+                    }
+                ],
+                imagesComments: [
+                    {
+                        heading: 'Левое переднее колесо',
+                        imagesComments: [
+                            {
+                                label: 'Комментарий',
+                                comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                                images: [
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                ],
+                            },
+                            {
+                                label: 'Скол',
+                                comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                                // images: [
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                // ],
+                            }
+                        ]
+                    },
+                    {
+                        heading: 'Левое переднее колесо',
+                        imagesComments: [
+                            {
+                                label: 'Комментарий',
+                                comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                                images: [
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                ],
+                            },
+                            {
+                                label: 'Скол',
+                                comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                                // images: [
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                // ],
+                            }
+                        ]
+                    }
+                ],
+            },
+            leftSide: {
+                carImage: 'https://i.postimg.cc/MGvsN5jj/img-8.png',
+                items: [
+                    {
+                        number: 1,
+                        label: 'Капот 2',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'success'
+                    },
+                    {
+                        number: 2,
+                        label: 'Капот 2',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'error'
+                    }
+                ],
+                imagesComments: [
+                    {
+                        heading: 'Левое переднее колесо',
+                        imagesComments: [
+                            {
+                                label: 'Комментарий',
+                                comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                                images: [
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                ],
+                            },
+                            {
+                                label: 'Скол',
+                                comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                                // images: [
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                // ],
+                            }
+                        ]
+                    },
+                    {
+                        heading: 'Левое переднее колесо',
+                        imagesComments: [
+                            {
+                                label: 'Комментарий',
+                                comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                                images: [
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                ],
+                            },
+                            {
+                                label: 'Скол',
+                                comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                                // images: [
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                // ],
+                            }
+                        ]
+                    }
+                ],
+            },
+            backSide: {
+                items: [
+                    {
+                        number: 1,
+                        label: 'Капот',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'success'
+                    },
+                    {
+                        number: 2,
+                        label: 'Капот',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'error'
+                    }
+                ],
+                carImage: 'https://i.postimg.cc/Y0FrHcTT/img-7.png',
+                imagesComments: [
+                    {
+                        heading: 'Левое переднее колесо',
+                        imagesComments: [
+                            {
+                                label: 'Комментарий',
+                                comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                                images: [
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                ],
+                            },
+                            {
+                                label: 'Скол',
+                                comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                                // images: [
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                // ],
+                            }
+                        ]
+                    },
+                    {
+                        heading: 'Левое переднее колесо',
+                        imagesComments: [
+                            {
+                                label: 'Комментарий',
+                                comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                                images: [
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                    'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                ],
+                            },
+                            {
+                                label: 'Скол',
+                                comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                                // images: [
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                                // ],
+                            }
+                        ]
+                    }
+                ],
+            },
+            topSide: {
+                carImage: 'https://i.postimg.cc/MGvsN5jj/img-8.png',
+                items: [
+                    {
+                        number: 1,
+                        label: 'Капот 2',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'success'
+                    },
+                    {
+                        number: 2,
+                        label: 'Капот 2',
+                        badgeLabel: '2 повреждения',
+                        badgeState: 'error'
+                    }
+                ],
+                // imagesComments: [
+                //     {
+                //         heading: 'Левое переднее колесо',
+                //         imagesComments: [
+                //             {
+                //                 label: 'Комментарий',
+                //                 comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                //                 images: [
+                //                     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 ],
+                //             },
+                //             {
+                //                 label: 'Скол',
+                //                 comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                //                 // images: [
+                //                 //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 // ],
+                //             }
+                //         ]
+                //     },
+                //     {
+                //         heading: 'Левое переднее колесо',
+                //         imagesComments: [
+                //             {
+                //                 label: 'Комментарий',
+                //                 comment: { title: 'Комментарий', desc: 'Комментарий очень  от.' },
+                //                 images: [
+                //                     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 ],
+                //             },
+                //             {
+                //                 label: 'Скол',
+                //                 comment: { title: 'Комментарий', desc: 'Этот комментарий очень важен. Прям настолько важен, что мне надо его растянуть на две или три строки. От так от.' },
+                //                 // images: [
+                //                 //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 //     'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                //                 // ],
+                //             }
+                //         ]
+                //     }
+                // ],
+            },
         }
     }
     const styles = fs.readFileSync('styles.css', 'utf-8');

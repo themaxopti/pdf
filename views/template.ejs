@@ -92,7 +92,8 @@
             <% if (block.slug === 'data-check-card' && i % 2 !== 0) { %>
               <%- include('partials/data-check-card', { title: block.title, state: block.state, comment: block.comment, additionalData: block.additionalData, imageUrl: block.imageUrl }) %>
             <% } %>
-          <% }) %></div>
+          <% }) %>
+        </div>
       </div>
     </div>
     <div style="margin-top: 40px;" class="container block third-block">
@@ -115,6 +116,281 @@
         <div class="card-comment__title"><%= data.thirdSection.comment.label %></div>
         <div class="card-comment__desc"><%= data.thirdSection.comment.desc %></div>
       </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block fourth-block">
+      <div style="margin-bottom: 40px" class="h2-block h2">
+        <div> 04 - Фото экстерьера </div>
+      </div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.fourthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.fourthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block fourth-block">
+      <div style="margin-bottom: 40px" class="h2-block h2">
+        <div> 05 - Фото колес </div>
+      </div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.fifthSection.items.forEach((block,i) => { %>
+              <%- include('partials/data-card', { heading: block.heading, items: block.items, comment: block.comment || null,images: block.images || null }) %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.fourthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block fourth-block">
+      <div style="margin-bottom: 40px" class="h2-block h2">
+        <div> 06 - Повреждения </div>
+      </div>
+      /* передняя часть */
+      <div style="margin-bottom: 60px;margin-top: 60px;" class="h2-block h2">
+        <div> Повреждения передней части </div>
+      </div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.items.forEach((block,i) => { %>
+              <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+         <div class="left-damage-image">
+          <img src="<%= data.sixthSection.carImage %>" alt="">
+         </div>
+        </div>
+      </div>
+      <div style="width: 100%; height: 1px; background-color: #B3B3B3;margin-top: 60px; margin-bottom: 60px;"></div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.imagesComments.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+            <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% data.sixthSection.imagesComments.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+            <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      /* передняя часть */
+      /* правая часть */
+      <div style="margin-bottom: 60px; margin-top: 60px;" class="h2-block h2">
+        <div> Повреждения Правой стороны </div>
+      </div>
+      <div style="width: 100%;" class="">
+        <div class="center-damage-image">
+          <img src="<%= data.sixthSection.rightSide.carImage %>" alt="">
+         </div>  
+      </div>
+      <div class="fourth-block__cards ">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.rightSide.items.forEach((block,i) => { %>
+              <% if (i % 2 === 0) { %>
+                <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% data.sixthSection.rightSide.items.forEach((block,i) => { %>
+              <% if (i % 2 !== 0) { %>
+                <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%; height: 1px; background-color: #B3B3B3;margin-top: 60px; margin-bottom: 60px;"></div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.rightSide.imagesComments.forEach((block,i) => { %>
+              <% if (i % 2 === 0) { %>
+                <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% data.sixthSection.rightSide.imagesComments.forEach((block,i) => { %>
+              <% if (i % 2 !== 0) { %>
+                <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      /* правая часть */
+      /* левая часть */
+      <div style="margin-bottom: 60px; margin-top: 60px;" class="h2-block h2">
+        <div> Повреждения левой стороны </div>
+      </div>
+      <div style="width: 100%;" class="">
+        <div class="center-damage-image">
+          <img src="<%= data.sixthSection.leftSide.carImage %>" alt="">
+         </div>  
+      </div>
+      <div class="fourth-block__cards ">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.leftSide.items.forEach((block,i) => { %>
+              <% if (i % 2 === 0) { %>
+                <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% data.sixthSection.leftSide.items.forEach((block,i) => { %>
+              <% if (i % 2 !== 0) { %>
+                <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%; height: 1px; background-color: #B3B3B3;margin-top: 60px; margin-bottom: 60px;"></div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.leftSide.imagesComments.forEach((block,i) => { %>
+              <% if (i % 2 === 0) { %>
+                <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% data.sixthSection.leftSide.imagesComments.forEach((block,i) => { %>
+              <% if (i % 2 !== 0) { %>
+                <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 60px;margin-top: 60px;" class="h2-block h2">
+        <div> Повреждения задней части </div>
+      </div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.items.forEach((block,i) => { %>
+              <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+         <div class="left-damage-image">
+          <img src="<%= data.sixthSection.carImage %>" alt="">
+         </div>
+        </div>
+      </div>
+      <div style="width: 100%; height: 1px; background-color: #B3B3B3;margin-top: 60px; margin-bottom: 60px;"></div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.imagesComments.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+            <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% data.sixthSection.imagesComments.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+            <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      /* Верхняя часть */
+      <div style="margin-bottom: 60px; margin-top: 60px;" class="h2-block h2">
+        <div> Повреждение крыши </div>
+      </div>
+      <div style="width: 100%;" class="">
+        <div class="center-damage-image">
+          <img src="<%= data.sixthSection.topSide.carImage %>" alt="">
+         </div>  
+      </div>
+      <div style="margin-top: 42px;" class="fourth-block__cards ">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% data.sixthSection.topSide.items.forEach((block,i) => { %>
+              <% if (i % 2 === 0) { %>
+                <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% data.sixthSection.topSide.items.forEach((block,i) => { %>
+              <% if (i % 2 !== 0) { %>
+                <%- include('partials/damage-card', { number: block.number, label: block.label, badgeLabel: block.badgeLabel, badgeState: block.badgeState }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <div class="fourth-block__cards">
+        <div class="col-1">
+          <div class="damage-cards">
+            <% typeof data.sixthSection.topSide.imagesComments !== 'undefined' && data.sixthSection.topSide.imagesComments.forEach((block,i) => { %>
+              <% if (i % 2 === 0) { %>
+                <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="damage-cards">
+            <% typeof data.sixthSection.topSide.imagesComments !== 'undefined' && data.sixthSection.topSide.imagesComments.forEach((block,i) => { %>
+              <% if (i % 2 !== 0) { %>
+                <%- include('partials/data-card', { heading: block.heading, imagesComments: block.imagesComments }) %>
+              <% } %>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      /* Верхняя часть */
+
     </div>
   </body>
 </html>
