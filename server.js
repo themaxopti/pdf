@@ -506,7 +506,430 @@ app.get('/', (req, res) => {
                 //     }
                 // ],
             },
-        }
+        },
+        seventhSection: {
+            items: [
+                {
+                    title: 'Комментарий',
+                    // state: 'error',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: {
+                        title: 'Комментарий',
+                        desc: 'Комментарий очень  от.'
+                    },
+                    linkButton: true
+                },
+                {
+                    title: 'Комментарий',
+                    // state: 'success',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null
+                }
+            ]
+        },
+        eighthSection: {
+            items: [
+                {
+                    title: 'Комментарий',
+                    // state: 'error',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: {
+                        title: 'Комментарий',
+                        desc: 'Комментарий очень  от.'
+                    },
+                    state: 'error'
+                },
+                {
+                    title: 'Комментарий',
+                    // state: 'success',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null
+                }
+            ]
+        },
+        ninthSection: {
+            items: [
+                {
+                    title: 'Чек лист',
+                    // state: 'error',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: undefined,
+                    state: 'error',
+                    checkList: {
+                        label: 'В наличии:',
+                        items: [
+                            'Комментарий очень  от.',
+                            'Комментарий очень  от.',
+                            'Комментарий очень  от.',
+                        ]
+                    }
+                },
+                {
+                    title: 'Комментарий',
+                    // state: 'success',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null
+                }
+            ]
+        },
+        tenthSection: {
+            items: [
+                {
+                    title: 'Фото',
+                    // state: 'error',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                },
+                {
+                    title: 'Комментарий',
+                    // state: 'success',
+                    comment: {
+                        title: 'Комментарий',
+                        desc: 'Комментарий очень  от.'
+                    }
+                }
+            ]
+        },
+        eleventhSection: {
+            items: [
+                {
+                    title: 'Фото',
+                    // state: 'error',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                },
+                {
+                    title: 'Ремни безопасности,задний ряд',
+                    state: 'success',
+                    comment: 'none'
+                }
+            ]
+        },
+        twelfthSection: {
+            items: [
+                {
+                    title: 'Фото',
+                    // state: 'error',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                },
+                {
+                    title: 'Ремни безопасности,задний ряд',
+                    state: 'success',
+                    comment: 'none'
+                }
+            ]
+        },
+        thirteenthSection: {
+            items: [
+                {
+                    title: 'Фото',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                },
+                {
+                    title: 'Фото',
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                }
+            ]
+        },
+        fourteenthSection: {
+            items: [
+                {
+                    imageUrl:'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    title: 'Фото',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                        }
+                    ]
+                },
+                {
+                    imageUrl:'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    title: 'Фото',
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                        }
+                    ]
+                }
+            ]
+        },
+        fifteenthSection: {
+            items: [
+                {
+                    title: 'Фото',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                },
+                {
+                    title: 'Фото',
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                }
+            ]
+        },
+        sixteenthSection: {
+            items: [
+                {
+                    title: 'Фото',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                },
+                {
+                    title: 'Фото',
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                }
+            ]
+        },
+        seventeenthSection: {
+            items: [
+                {
+                    title: 'Фото',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                },
+                {
+                    title: 'Фото',
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                }
+            ]
+        },
+        eighteenthSection: {
+            state: 'completed',
+            items: [
+                {
+                    title: 'Фото',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                },
+                {
+                    title: 'Фото',
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                }
+            ]
+        },
+        nineteenthSection: {
+            items: [
+                {
+                    title: 'Страховой полис',
+                    images: [
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                        'https://i.postimg.cc/Rh5Jd1VL/770f63bd3ec58dca14d9c0e9253175d07007ef01.jpg',
+                    ],
+                    comment: 'none',
+                },
+                {
+                    title: 'Фото',
+                    comment: null,
+                    items: [
+                        {
+                            label: 'VIN-номер',
+                            value: 'Volkswagen',
+                            state: 'error'
+                        },
+                        {
+                            label: 'VIN-номер 2',
+                            value: 'Volkswagen',
+                            state: 'success'
+                        }
+                    ]
+                }
+            ]
+        },
     }
     const styles = fs.readFileSync('styles.css', 'utf-8');
     res.render('template', { styles, data });

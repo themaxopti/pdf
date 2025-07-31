@@ -8,12 +8,51 @@
         <div class="badge success">В норме</div>
       <% } %>
     </div>
+    <% if (typeof checkList !== 'undefined') { %>
+        <div style="margin-top: 40px;" class="car-checklist">
+            <div style="margin-bottom: 40px;" class="car-checklist-label"><%= checkList.label %></div>
+            <div class="car-checklist-block">
+                <% checkList.items.forEach(item => { %>
+                    <div class="item">
+                        <%= item %>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    <% } %>
+    <% if (typeof linkButton !== 'undefined') { %>
+     <div style="width: 100%;margin-top: 40px;" class="video-button">
+        Перейти к просмотру видео
+        <svg style="margin-left: auto;" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2H24M24 2V24M24 2L2 24" stroke="#FEFEFE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+     </div>
+    <% } %>
+    <% if (typeof images !== 'undefined') { %>
     <div class="images-grid">
-      <% images.forEach(image => { %>
+      <% typeof images !== 'undefined' && images.forEach(image => { %>
         <div><img src="<%= image %>" alt=""></div>
       <% }) %>
     </div>
+    <% } %>
+    <% if (typeof items !== 'undefined') { %>
+    <div style="margin-top: 40px;" class="data-items">
+      <% typeof items !== 'undefined' && items.forEach(item => { %>
+        <div class="item">
+          <div class="label"><%= item.label %></div>
+          <% if (!item.state) { %>
+            <div class="value"><%= item.value %></div>
+          <% } %>
+          <% if (item.state) { %>
+            <%- include('badge', { label: item.value, state: item.state }) %>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+    <% } %>
+    <% if (comment !== 'none') { %>
     <div style="margin-top: 40px;">
       <%- include('card-comment', { title: comment?.title || null, desc: comment?.desc || null }) %>
     </div>
+    <% } %>
 </div>

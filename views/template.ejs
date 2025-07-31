@@ -15,6 +15,12 @@
     </style>
   </head>
   <body>
+    <div class="header">
+      <div class="container">
+        <img src="https://i.postimg.cc/x8Ds97Fh/Logo-3.png" alt="">
+        <div class="label">Осмотрено с помощью AR Group</div>
+      </div>
+    </div>
     <div class="container">
       <div class="main-section">
         <div class="col-1">
@@ -161,7 +167,6 @@
       <div style="margin-bottom: 40px" class="h2-block h2">
         <div> 06 - Повреждения </div>
       </div>
-      /* передняя часть */
       <div style="margin-bottom: 60px;margin-top: 60px;" class="h2-block h2">
         <div> Повреждения передней части </div>
       </div>
@@ -200,8 +205,6 @@
           </div>
         </div>
       </div>
-      /* передняя часть */
-      /* правая часть */
       <div style="margin-bottom: 60px; margin-top: 60px;" class="h2-block h2">
         <div> Повреждения Правой стороны </div>
       </div>
@@ -251,8 +254,6 @@
           </div>
         </div>
       </div>
-      /* правая часть */
-      /* левая часть */
       <div style="margin-bottom: 60px; margin-top: 60px;" class="h2-block h2">
         <div> Повреждения левой стороны </div>
       </div>
@@ -340,7 +341,6 @@
           </div>
         </div>
       </div>
-      /* Верхняя часть */
       <div style="margin-bottom: 60px; margin-top: 60px;" class="h2-block h2">
         <div> Повреждение крыши </div>
       </div>
@@ -389,8 +389,301 @@
           </div>
         </div>
       </div>
-      /* Верхняя часть */
-
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 07 - Замер ЛКП </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.seventhSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.seventhSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 08 - Фото интерьера </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.eighthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.eighthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 09 - Багажное отделение </div>
+          <% if (typeof data.ninthSection.state !== 'undefined' && data.ninthSection.state === 'success') { %>
+          <div style="margin-left: 24px;" class="badge success">В норме</div>
+        <% } %>
+        <% if (typeof data.ninthSection.state !== 'undefined' && data.ninthSection.state === 'error') { %>
+          <div style="margin-left: 24px;" class="badge error">Не в норме</div>
+        <% } %>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.ninthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.ninthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 10 - Повреждение салона </div>
+          <% if (typeof data.tenthSection.state !== 'undefined' && data.tenthSection.state === 'success') { %>
+          <div style="margin-left: 24px;" class="badge success">В норме</div>
+        <% } %>
+        <% if (typeof data.tenthSection.state !== 'undefined' && data.tenthSection.state === 'error') { %>
+          <div style="margin-left: 24px;" class="badge error">Не в норме</div>
+        <% } %>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.tenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.tenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 11 - Проверка системы безопасности </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.eleventhSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.eleventhSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 12 - Незаведённый двигатель </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.twelfthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.twelfthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 13 - Заведённый двигатель </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.thirteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.thirteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 14 - Осмотр тормозной системы </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.fourteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/data-check-card', { imageUrl:block.imageUrl,items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.fourteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/data-check-card', { imageUrl:block.imageUrl, items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 15 - Осмотр подвески </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.fifteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.fifteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 16 - Функционал салона </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.sixteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.sixteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 17 - Компьютерная диагностика </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.seventeenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.seventeenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 18 - Тест драйв </div>
+        </div>
+        <% if (typeof data.eighteenthSection.state !== 'undefined' && data.eighteenthSection.state === 'completed') { %>
+        <div style="margin-bottom: 40px" class="h2-block h2 completed">
+          <div> Пройден тест драйв </div>
+        </div>
+        <% } %>
+        <% if (typeof data.eighteenthSection.state !== 'undefined' && data.eighteenthSection.state === 'error') { %>
+        <div style="margin-bottom: 40px" class="h2-block h2 error">
+          <div> Не пройден тест драйв </div>
+        </div>
+        <% } %>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.eighteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.eighteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px;" class="container block third-block">
+        <div style="margin-bottom: 40px" class="h2-block h2">
+          <div> 19 - Документация </div>
+        </div>
+        <div class="fourth-block__cards">
+        <div class="col-1">
+          <% data.nineteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 === 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+        <div class="col-2">
+          <% data.nineteenthSection.items.forEach((block,i) => { %>
+            <% if (i % 2 !== 0) { %>
+              <%- include('partials/card-images', { items: block.items, title: block.title, state: block.state, images: block.images, comment: block.comment || null, linkButton: block.linkButton || undefined, checkList: block.checkList || undefined }) %>
+            <% } %>
+          <% }) %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

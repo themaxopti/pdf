@@ -14,6 +14,23 @@
       alt=""
     />
   </div>
+
+    <% if (typeof items !== 'undefined') { %>
+        <div style="margin-top: 40px;" class="data-items">
+        <% typeof items !== 'undefined' && items.forEach(item => { %>
+            <div class="item">
+            <div class="label"><%= item.label %></div>
+            <% if (!item.state) { %>
+                <div class="value"><%= item.value %></div>
+            <% } %>
+            <% if (item.state) { %>
+                <%- include('badge', { label: item.value, state: item.state }) %>
+            <% } %>
+            </div>
+        <% }) %>
+        </div>
+    <% } %>
+  
   <div class="card-comment" style="margin-top: 24px">
     <% if (comment) { %>
         <div class="card-comment__title"><%= comment.title %></div>
@@ -26,11 +43,11 @@
     <% } %>
   </div>
   <div style="margin-top: 24px">
-    <% if (additionalData) { %>
+    <% if (typeof additionalData !== 'undefined' && additionalData) { %>
         <div class="additional-checkbox-block">
             <div class="heading">Дополнительные данные</div>
             <div class="labels">
-            <% additionalData.labels.forEach(item => { %> 
+            <% typeof additionalData !== 'undefined' && additionalData.labels.forEach(item => { %> 
                 <div class="label">
                     <div class="checkbox">
                     <% if (item.checked) { %> 
